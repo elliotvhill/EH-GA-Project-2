@@ -6,7 +6,21 @@ const main = async (req, res) => {
     const concerts = await Concert.find({})
     const venues = await Venue.find({})
     const artists = [
-        {},
+        {
+            artist: 'The National',
+            isHeadliner: true,
+            image: '',
+        },
+        {
+            artist: ,
+            isHeadliner: false,
+            image: '',
+        },
+        {
+            artist: ,
+            isHeadliner: ,
+            image: ,
+        },
         { timestamps: true }
     ]
     await Artist.deleteMany()

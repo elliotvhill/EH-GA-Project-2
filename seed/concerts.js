@@ -18,6 +18,8 @@ const main = async () => {
             guests: ['Luke Hill'],
             ticket_price: undefined,
             venue_id: venue_names[0],
+            set_list: [],
+            album_tour: ['Sleep Well Beast', 'First Two Pages of Frankenstein'],
         },
         {
             concert_day: 'Sep 29, 2018',
@@ -26,6 +28,8 @@ const main = async () => {
             guests: ['Luke Hill', 'Janelle Hill'],
             ticket_price: undefined,
             venue_id: venue_names[0],
+            set_list: [],
+            album_tour: [],
         },
         {
             concert_day: 'Sep 30, 2018',
@@ -34,6 +38,8 @@ const main = async () => {
             guests: ['Luke Hill'],
             ticket_price: undefined,
             venue_id: venue_names[0],
+            set_list: [],
+            album_tour: [],
         },
         {
             concert_day: 'Sep 25, 2022',
@@ -42,6 +48,8 @@ const main = async () => {
             guests: ['Grant Hale'],
             ticket_price: 349,
             venue_id: venue_names[1],
+            set_list: [],
+            album_tour: [],
         },
         {
             concert_day: 'Aug 2, 2023',
@@ -50,6 +58,8 @@ const main = async () => {
             guests: ['Grant Hale', 'Luke Hill', 'Isabella Ness'],
             ticket_price: undefined,
             venue_id: venue_names[2],
+            set_list: [],
+            album_tour: [],
         },
         {
             concert_day: 'Aug 3, 2023',
@@ -58,6 +68,8 @@ const main = async () => {
             guests: ['Grant Hale'],
             ticket_price: 60,
             venue_id: venue_names[3],
+            set_list: [],
+            album_tour: [],
         },
         { timestamps: true }
     ]
