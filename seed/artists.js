@@ -1,3 +1,18 @@
+const db = require('../db')
+const { Venue, Concert, Artist } = require('../models')
+db.on("error", console.error.bind(console, 'MongoDB connection error:'))
+
+const main = async (req, res) => {
+    const concerts = await Concert.find({})
+    const venues = await Venue.find({})
+    const artists = [
+        {},
+        { timestamps: true }
+    ]
+    await Artist.deleteMany()
+    await Artist.insertMany(artists)
+}
+
 
 
 

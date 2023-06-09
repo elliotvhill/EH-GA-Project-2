@@ -2,7 +2,7 @@ const express = require("express");
 const PORT = process.env.PORT || 3001;
 const db = require('./db')
 const app = express();
-const { Venue, Concert } = require('./models')
+const { Venue, Concert, Artist } = require('./models')
 
 app.listen(PORT, () => {
   console.log(`Express server running on port ${PORT}`);
@@ -16,4 +16,8 @@ app.get('/api/venues', async (req, res) => {
 app.get('/api/concerts', async (req, res) => {
   const concerts = await Concert.find({})
   res.json(concerts)
+})
+app.get('/api/artists', async (req, res) => {
+  const artists = await Artist.find({})
+  res.json(artists)
 })
