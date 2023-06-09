@@ -3,7 +3,8 @@ const concertSchema = new Schema(
     {
         date: { type: String, required: true },
         lineup: { type: Array, required: true },
-        attendees: { type: String, required: true }, // might be actual concert attendance (number) OR user's personal companions (string)
+        attendees: { type: Number, required: true },
+        guests: { type: Array, required: true },
         ticket_price: { type: Number, required: true }
     },
     { timestamps: true }

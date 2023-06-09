@@ -19,6 +19,7 @@ Users will be able to pull a list of concerts they've attended by venue, date, a
 - Provide external links to the artists / albums on streaming services.
 - Create a login function
 - Share with friends
+- Implement user image upload using [Cloudinary](https://cloudinary.com/)
 
 ## Resources
 - [Project Trello board](https://trello.com/b/1gAmDMiL)
@@ -31,3 +32,5 @@ Users will be able to pull a list of concerts they've attended by venue, date, a
 - [Figma Wireframe:](https://www.figma.com/file/d7H5HDNYjKgMvm6PLBuQAK/Sad-Dads?type=design&node-id=0%3A1&t=lTgv61cQKh5h0IrY-1)
 
 ![Screenshot of Sad Dads concert tracker wireframe](https://i.imgur.com/B4hubWr.png)
+
+- [How to integrate Cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
