@@ -1,11 +1,12 @@
 const { Schema } = require('mongoose')
 const concertSchema = new Schema(
     {
-        date: { type: String, required: true },
+        concert_day: { type: String },
         lineup: { type: Array, required: true },
-        attendees: { type: Number, required: true },
-        guests: { type: Array, required: true },
-        ticket_price: { type: Number, required: true }
+        attendees: { type: Number },
+        guests: { type: Array },
+        ticket_price: { type: Number },
+        venue_id: { type: Array }
     },
     { timestamps: true }
 )
