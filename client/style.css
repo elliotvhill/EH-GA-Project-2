@@ -25,6 +25,13 @@ h2 {
     letter-spacing: .05rem;
 }
 
+h3 {
+    text-transform: uppercase;
+    border-bottom: 0.3rem solid rgb(156, 136, 129);
+    font-size: 3rem;
+    margin-top: 0;
+}
+
 .enter {
     display: flex;
     justify-content: center;
@@ -38,10 +45,34 @@ button {
     width: 10rem;
     text-transform: lowercase;
     font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: rgb(216, 136, 111);
 }
 
 button:hover {
-    color: rgb(216, 136, 111);
+    color: rgb(186, 110, 86);
+}
+
+li:hover {
+    border-bottom: 0.15rem solid rgb(156, 136, 129);
+    font-weight: 600;
+    transition: border 200ms ease;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+.hero-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 60vw;
+    /* max-height: 40vh; */
 }
 
 #year {
