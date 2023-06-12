@@ -1,85 +1,93 @@
-
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(255, 162, 133);
-    color: rgb(255, 237, 224);
-    font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(255, 162, 133);
+  color: rgb(255, 237, 224);
+  font-family: "Quicksand", sans-serif;
 }
 
 header {
-    margin: 0 auto;
-    display: block;
-    text-align: center;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 h1 {
-    text-transform: uppercase;
-    letter-spacing: .3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
 }
 
 h2 {
-    font-size: 20px;
-    text-transform: lowercase;
-    letter-spacing: .05rem;
+  font-size: 20px;
+  text-transform: lowercase;
+  letter-spacing: 0.05rem;
 }
 
 h3 {
-    text-transform: uppercase;
-    border-bottom: 0.3rem solid rgb(156, 136, 129);
-    font-size: 3rem;
-    margin-top: 0;
+  text-transform: uppercase;
+  border-bottom: 0.3rem solid rgb(156, 136, 129);
+  font-size: 3rem;
+  margin-top: 0;
 }
 
 .enter {
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1.landing {
+    font-size: 5rem;
 }
 
 button {
-    border: 0;
-    padding: 1rem;
-    border-radius: 10rem;
-    width: 10rem;
-    text-transform: lowercase;
-    font-size: 1rem;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    color: rgb(216, 136, 111);
+  border: 0;
+  padding: 1rem;
+  border-radius: 10rem;
+  width: 10rem;
+  text-transform: lowercase;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  color: rgb(216, 136, 111);
 }
 
 button:hover {
-    color: rgb(186, 110, 86);
+  color: rgb(186, 110, 86);
 }
 
 li:hover {
-    border-bottom: 0.15rem solid rgb(156, 136, 129);
-    font-weight: 600;
-    transition: border 200ms ease;
+  border-bottom: 0.15rem solid rgb(156, 136, 129);
+  font-weight: 600;
+  transition: border 200ms ease;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-transform: uppercase;
 }
 
 .hero-image {
-    display: block;
-    margin: 0 auto;
-    max-width: 60vw;
-    /* max-height: 40vh; */
+  display: block;
+  margin: 0 auto;
+  max-width: 60vw;
+  margin-top: 2rem;
 }
 
 #year {
-    font-size: 11px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    text-align: center;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
