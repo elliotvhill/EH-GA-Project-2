@@ -62,8 +62,11 @@ button:hover {
   color: rgb(186, 110, 86);
 }
 
-.menu ul {
+ul {
   list-style: none;
+}
+
+.menu ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -99,7 +102,7 @@ ul.venues {
   text-transform: uppercase;
 }
 
-.venue-list {
+.container {
   display: flex;
   align-items: flex-start;
   align-content: left;

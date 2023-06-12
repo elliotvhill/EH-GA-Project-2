@@ -3,27 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Sad Dads - Concerts </title>
+    <title>Sad Dads - Concerts</title>
     <link href="style.css" rel="stylesheet" />
     <script defer src="script.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header>
       <h3><a href="/client/home.html">Sad Dads</a></h3>
     </header>
     <div class="menu">
-      <ul>
+      <ul class="menu">
         <li><a href="/client/concerts.html"> Concerts </a></li>
         <li><a href="/client/venues.html"> Venues </a></li>
         <li><a href="/client/artists.html"> Artists </a></li>
       </ul>
     </div>
+    <div class="concert-list" class="container">
+      <ul class="concerts">
+        <li class="concerts" id="concert1"></li>
+        <li class="concerts" id="concert2"></li>
+        <li class="concerts" id="concert3"></li>
+        <li class="concerts" id="concert4"></li>
+        <li class="concerts" id="concert5"></li>
+        <li class="concerts" id="concert6"></li>
+      </ul>
+    </div>
+    <footer>
+      <div id="year"></div>
+    </footer>
   </body>
 </html>

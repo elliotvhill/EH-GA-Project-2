@@ -16,7 +16,18 @@ app.get('/api/venues', async (req, res) => {
 app.get('/api/concerts', async (req, res) => {
   const concerts = await Concert.find({})
   res.json(concerts)
+  console.log(concerts)
 })
+app.get('/api/concerts/:id', async (req, res) => {
+  const { id } = req.params
+  const concert = await Concert.findById(id)
+  res.json(concert)
+})
+// app.get('/api/concerts/:day', async (req, res) => {
+//   const { day } = req.params
+//   const concertDate = await Concert.findOne({ concert_day: `${day}` })
+//   res.json(concertDate)
+// })
 app.get('/api/artists', async (req, res) => {
   const artists = await Artist.find({})
   res.json(artists)

@@ -1,18 +1,32 @@
+const baseUrl = `http://localhost:3001/api`
 
+// VENUES
 const venue1 = document.querySelector("#venue1")
 const venue2 = document.querySelector("#venue2")
 const venue3 = document.querySelector("#venue3")
 const venue4 = document.querySelector("#venue4")
 
-venue1.innerHTML = `Forest Hills Stadium`
-venue2.innerHTML = `Seaside Park`
-venue3.innerHTML = `The Met Philadelphia`
-venue4.innerHTML = `Westville Music Bowl`
+// CONCERTS
+const firstConcert = document.querySelector('#concert1')
+const secondConcert = document.querySelector('#concert2')
+const thirdConcert = document.querySelector('#concert3')
+const fourthConcert = document.querySelector('#concert4')
+const fifthConcert = document.querySelector('#concert5')
+const sixthConcert = document.querySelector('#concert6')
+
+
+// FUNCTIONS
+document.addEventListener("DOMContentLoaded", async () => {
+    let response = await axios.get(`${baseUrl}/concerts/6487303352d2516a2e7d7e1a`)
+    let concert1 = response.data.collection[0]
+    firstConcert.innerHTML = `${concert1}`
+    console.log(concert1)
+})
 
 
 
 
-
+// FOOTER
 const currentYear = new Date().getFullYear();
 const footerDate = () => { return currentYear; }
 let copyright = document.querySelector('#year')
