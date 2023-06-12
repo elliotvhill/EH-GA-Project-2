@@ -1,7 +1,7 @@
 # SAD DADS - concert tracker
 Project 2 for GA SWEI-0508
 
-!['Sad Dads' landing page with an 'enter site' link below.](https://i.imgur.com/un0Wma8.png?5)
+!['Sad Dads' landing page with an 'enter site' link below.](/images/SAD-DADS-landing.png)
 
 
 ## Description
