@@ -62,18 +62,52 @@ button:hover {
   color: rgb(186, 110, 86);
 }
 
-li:hover {
-  border-bottom: 0.15rem solid rgb(156, 136, 129);
-  font-weight: 600;
-  transition: border 200ms ease;
-}
-
-ul {
+.menu ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   text-transform: uppercase;
+}
+
+li>a:hover {
+  border-bottom: 0.15rem solid rgb(156, 136, 129);
+  font-weight: 600;
+  transition: border 200ms ease;
+}
+
+/* .container {
+  display: grid;
+  grid-template-columns: repeat(2, 7fr);
+  grid-template-rows: repeat(4, 7fr);
+} */
+
+.venues li:hover {
+  font-weight: 600;
+  transition: border 200ms ease;
+}
+
+ul.venues {
+  padding: 0;
+}
+
+.venues li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.venue-list {
+  display: flex;
+  align-items: flex-start;
+  align-content: left;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 2rem;
+  background-color: rgba(156, 136, 129, 10%);
+  padding: 2rem;
 }
 
 .hero-image {
