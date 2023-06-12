@@ -22,6 +22,7 @@ Users will be able to pull a list of concerts they've attended by venue, date, a
 - Implement user image upload using [Cloudinary](https://cloudinary.com/)
 
 ## Resources
+
 - [Project Trello board](https://trello.com/b/1gAmDMiL)
 
 
@@ -34,3 +35,9 @@ Users will be able to pull a list of concerts they've attended by venue, date, a
 ![Screenshot of Sad Dads concert tracker wireframe](https://i.imgur.com/B4hubWr.png)
 
 - [How to integrate Cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
+
+#### Photos:
+- [Photos of the National | Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:The_National)
+- [Photo of Matt Berninger at All Points East 2022](https://www.flickr.com/photos/raph_ph/52327368939/) | [Raph_PH (Flikr)](https://www.flickr.com/people/69880995@N04)
+- [Photo of Patti Smith | UCLA Library Special Collections](https://www.flickr.com/photos/127608843@N08/24210114113/)
+- [Photo of The Beths at Neumos](https://www.flickr.com/photos/davidjlee/52697057674/) | [David Lee from Redmond, WA, USA (Flikr)](https://www.flickr.com/people/46192164@N06)
