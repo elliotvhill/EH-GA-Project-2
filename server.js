@@ -1,9 +1,12 @@
-const express = require("express");
+const express = require('express');
+const cors = require('cors')
 const PORT = process.env.PORT || 3001;
 const db = require('./db')
 const app = express();
 const { Venue, Concert, Artist } = require('./models')
 
+app.use(cors())
+app.use(express.json())
 app.listen(PORT, () => {
   console.log(`Express server running on port ${PORT}`);
 });

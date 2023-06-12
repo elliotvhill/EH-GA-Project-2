@@ -1,4 +1,7 @@
-const baseUrl = `http://localhost:3001/api`
+const apiUrl = `http://localhost:3001/api`
+const baseUrl = `http://127.0.0.1:5500/client`
+
+const concertsBtn = document.querySelector('#concerts')
 
 // VENUES
 const venue1 = document.querySelector("#venue1")
@@ -16,10 +19,10 @@ const sixthConcert = document.querySelector('#concert6')
 
 
 // FUNCTIONS
-document.addEventListener("DOMContentLoaded", async () => {
-    let response = await axios.get(`${baseUrl}/concerts/6487303352d2516a2e7d7e1a`)
-    let concert1 = response.data.collection[0]
-    firstConcert.innerHTML = `${concert1}`
+concertsBtn.addEventListener('click', async () => {
+    let response = await axios.get(`${apiUrl}/concerts`)
+    let concert1 = response.data.collection.concerts[0]
+    // firstConcert.innerHTML = `${concert1}`
     console.log(concert1)
 })
 
