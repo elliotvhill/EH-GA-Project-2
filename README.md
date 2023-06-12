@@ -36,6 +36,8 @@ Users will be able to pull a list of concerts they've attended by venue, date, a
 
 - [How to integrate Cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
 
+- Setlist information from [setlist.fm](https://www.setlist.fm/) and [Concert Archives](https://www.concertarchives.org/)
+
 #### Photos:
 - [Photos of the National | Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:The_National)
 - [Photo of Matt Berninger at All Points East 2022](https://www.flickr.com/photos/raph_ph/52327368939/) | [Raph_PH (Flikr)](https://www.flickr.com/people/69880995@N04)
