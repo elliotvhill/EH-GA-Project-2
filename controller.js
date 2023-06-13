@@ -148,7 +148,7 @@ const getArtistById = async (req, res) => {
 }
 const createArtist = async (req, res) => {
     try {
-        const artist = await new Artist(req.body, { new: true })
+        const artist = await new Artist(req.body)
         await artist.save()
         return res.status(201).json({ artist })
     } catch (error) {
@@ -158,7 +158,7 @@ const createArtist = async (req, res) => {
 const updateArtist = async (req, res) => {
     try {
         const { id } = req.params
-        const artist = await Artist.findByIdAndUpdate(id)
+        const artist = await Artist.findByIdAndUpdate(id, req.body, { new: true })
         if (artist) {
             return res.status(200).json(artist)
         }
