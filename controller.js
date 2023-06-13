@@ -91,6 +91,39 @@ const getConcertById = async (req, res) => {
         return res.status(500).send(error.message)
     }
 }
+const createConcert = async (req, res) => {
+    try {
+        const concert = await new Concert(req.body)
+        await concert.save()
+        return res.status(201).json({ concert })
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+const updateConcert = async (req, res) => {
+    try {
+        const { id } = req.params
+        const concert = await Concert.findByIdAndUpdate(id, req.body, { new: true })
+        if (concert) {
+            return res.status(200).json(concert)
+        }
+        throw new Error('Concert not found')
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+}
+const deleteConcert = async (req, res) => {
+    try {
+        const { id } = req.params
+        const deleted = await Concert.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send('Concert deleted')
+        }
+        throw new Error('Concert not found. Could not delete.')
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
 
 // ARTISTS
 const getArtists = async (req, res) => {
@@ -113,6 +146,39 @@ const getArtistById = async (req, res) => {
         return res.status(500).send(error.message)
     }
 }
+const createArtist = async (req, res) => {
+    try {
+        const artist = await new Artist(req.body)
+        await artist.save()
+        return res.status(201).json({ artist })
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+const updateArtist = async (req, res) => {
+    try {
+        const { id } = req.params
+        const artist = await Artist.findByIdAndUpdate(id, req.body, { new: true })
+        if (artist) {
+            return res.status(200).json(artist)
+        }
+        throw new Error('Artist not found')
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+}
+const deleteArtist = async (req, res) => {
+    try {
+        const { id } = req.params
+        const deleted = await Artist.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send('Artist deleted')
+        }
+        throw new Error('Artist not found. Could not delete.')
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
 
 module.exports = {
     getVenues,
@@ -123,6 +189,12 @@ module.exports = {
     deleteVenue,
     getConcerts,
     getConcertById,
+    createConcert,
+    updateConcert,
+    deleteConcert,
     getArtists,
-    getArtistById
+    getArtistById,
+    createArtist,
+    updateArtist,
+    deleteArtist,
 }
