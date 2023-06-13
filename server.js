@@ -18,7 +18,3 @@ app.listen(PORT, () => {
 
 app.get('/', (req, res) => res.json({ message: 'This is the Sad Dads landing page. Welcome!' }))
 app.use('/api', AppRouter)
-
-// app.post('/api/concerts/', controller.createConcert)
-// app.put('/api/concerts/update/:id', controller.updateConcert)
-// app.delete('/api/concerts/delete/:id', controller.deleteConcert)

@@ -35,7 +35,6 @@ Users will be able to pull a list of concerts they've attended by venue, date, a
 ![Screenshot of Sad Dads concert tracker wireframe](https://i.imgur.com/B4hubWr.png)
 
 - [How to integrate Cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary)
-
 - Setlist information from [setlist.fm](https://www.setlist.fm/) and [Concert Archives](https://www.concertarchives.org/)
 
 #### Photos:

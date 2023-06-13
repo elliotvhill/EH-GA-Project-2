@@ -12,6 +12,9 @@ Router.delete('/venues/:id', VenueRouter)
 Router.get('/venues/:id', VenueRouter)
 // concerts
 Router.get('/concerts', ConcertRouter)
+Router.post('/concerts', ConcertRouter)
+Router.put('/concerts/:id', ConcertRouter)
+Router.delete('/concerts/:id', ConcertRouter)
 Router.get('/concerts/:id', ConcertRouter)
 // artists
 Router.get('/artists', ArtistRouter)
