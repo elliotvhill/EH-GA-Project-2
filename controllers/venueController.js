@@ -10,6 +10,20 @@ const getVenues = async (req, res) => {
     }
 }
 
+const getVenueById = async (req, res) => {
+    try {
+        const { id } = req.params
+        const venue = await Venue.findById(id)
+        if (venue) {
+            return res.status(200).json({ venue })
+        }
+        return res.status(404).send('Venue not found')
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
 module.exports = {
-    getVenues
+    getVenues,
+    getVenueById
 }
