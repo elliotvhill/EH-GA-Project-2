@@ -24,6 +24,51 @@ const getVenueById = async (req, res) => {
         return res.status(500).send(error.message)
     }
 }
+const getVenueByName = async (req, res) => {
+    try {
+        const { id } = req.params
+        const venueName = await Venue.findOne({ venue_name: `${id}` })
+        if (venueName) {
+            return res.status(200).json(venueName)
+        }
+        return res.status(404).send('No venue by that name')
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+const createVenue = async (req, res) => {
+    try {
+        const venue = await new Venue(req.body)
+        await venue.save()
+        return res.status(201).json({ venue })
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+const updateVenue = async (req, res) => {
+    try {
+        const { id } = req.params
+        const venue = await Venue.findByIdAndUpdate(id, req.body, { new: true })
+        if (venue) {
+            return res.status(200).json(venue)
+        }
+        throw new Error('Venue not found')
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+}
+const deleteVenue = async (req, res) => {
+    try {
+        const { id } = req.params
+        const deleted = await Venue.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send('Venue deleted')
+        }
+        throw new Error('Venue not found. Could not delete.')
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
 
 // CONCERTS
 const getConcerts = async (req, res) => {
@@ -72,6 +117,10 @@ const getArtistById = async (req, res) => {
 module.exports = {
     getVenues,
     getVenueById,
+    getVenueByName,
+    createVenue,
+    updateVenue,
+    deleteVenue,
     getConcerts,
     getConcertById,
     getArtists,
