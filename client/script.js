@@ -1,25 +1,60 @@
 const apiUrl = `http://localhost:3001/api`
 const baseUrl = `http://127.0.0.1:5500/client`
-const venueMenu = document.querySelector('#venues')
-const venueList = document.querySelector('.venues')
+const mainContainer = document.querySelector('.container')
+const mainContent = document.querySelector('.main-content')
+// menu buttons
+const concertBtn = document.querySelector('#concerts')
+const venuesBtn = document.querySelector('#venues')
+const artistsBtn = document.querySelector('#artists')
 
-const getVenues = async () => {
+
+venuesBtn.addEventListener('click', async () => {
     let response = await axios.get(`${apiUrl}/venues`)
     const venuesArr = response.data.venues
+    let venuesList = ''
     let venuesHTML = ''
     venuesArr.forEach((venue) => {
         let venueName = venue.venue_name
         console.log(venueName)
-        venuesHTML += `<li class="venues">${venueName}</li>`
+        venuesList += `<li class="venues">${venueName}</li>`
+        venuesHTML = `<ul class="venues">${venuesList}</ul>`
     })
-    venueList.innerHTML = venuesHTML
-}
-
-venueMenu.addEventListener('click', async (event) => {
-    event.preventDefault()
-    console.log('venue menu clicked')
-    getVenues()
+    mainContent.innerHTML = venuesHTML
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const getVenues = async () => {
+//     let response = await axios.get(`${apiUrl}/venues`)
+//     const venuesArr = response.data.venues
+//     let venuesHTML = ''
+//     venuesArr.forEach((venue) => {
+//         let venueName = venue.venue_name
+//         console.log(venueName)
+//         venuesHTML += `<li class="venues">${venueName}</li>`
+//     })
+//     venueList.innerHTML = venuesHTML
+// }
+
+// venueMenu.addEventListener('click', async (event) => {
+//     event.preventDefault()
+//     console.log('venue menu clicked')
+//     getVenues()
+// })
 
 // const concertsBtn = document.querySelector('#concertsLink')
 
