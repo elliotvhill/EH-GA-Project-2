@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -29,6 +33,15 @@ h3 {
   border-bottom: 0.3rem solid rgb(156, 136, 129);
   font-size: 3rem;
   margin-top: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
 }
 
 .enter {
@@ -64,7 +77,11 @@ button:hover {
 }
 
 ul {
+    padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .menu ul {
@@ -85,16 +102,13 @@ li>a:hover {
   transition: border 200ms ease;
 }
 
-/* ul.venues {
-} */
-
-.venues {
+/* .venues {
   padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
+} */
 
 .container {
   display: flex;
