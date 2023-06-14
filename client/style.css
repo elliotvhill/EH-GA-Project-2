@@ -80,12 +80,6 @@ li>a:hover {
   transition: border 200ms ease;
 }
 
-/* .container {
-  display: grid;
-  grid-template-columns: repeat(2, 7fr);
-  grid-template-rows: repeat(4, 7fr);
-} */
-
 .venues li:hover {
   font-weight: 600;
   transition: border 200ms ease;
