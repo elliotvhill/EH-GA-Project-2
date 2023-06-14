@@ -1,13 +1,11 @@
 const apiUrl = `http://localhost:3001/api`
-const baseUrl = `http://127.0.0.1:5500/client`
+// const baseUrl = `http://127.0.0.1:5500/client`
 const mainContainer = document.querySelector('.container')
 const mainContent = document.querySelector('.main-content')
 const concertsBtn = document.querySelector('#concerts')
 const venuesBtn = document.querySelector('#venues')
 const artistsBtn = document.querySelector('#artists')
-
 document.addEventListener('DOMContentLoaded', (event) => mainContainer.style.visibility = 'hidden')
-
 showContent = () => mainContainer.style.visibility = 'visible'
 
 // menu buttons
