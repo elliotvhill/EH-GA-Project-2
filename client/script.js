@@ -2,30 +2,22 @@ const apiUrl = `http://localhost:3001/api`
 const baseUrl = `http://127.0.0.1:5500/client`
 const venueList = document.querySelector('.venue-list')
 
-// get data via axios
 const getVenues = async () => {
+    // get data via axios
     let response = await axios.get(`${apiUrl}/venues`)
     // log the data to make sure it's correct
     // console.log(response)
     const venuesArr = response.data.venues
-    console.log(Object.entries(venuesArr))
-    // venuesArr.forEach(venue => {
-    //     for (let value in venue) {
-    //         console.log(`${venue[value]}`)
-    //     }
-    // })
-    // console.log(venuesArr)
-    // const listVenues = () => {
-    //     venuesArr.forEach((venue) => {
-    //         console.log(venue)
-    //         })
-    // }
-    // listVenues()
-    // venueList.innerHTML = venuesArr
+    venuesArr.forEach((venue) => {
+        let venuesList = venue.venue_name
+        console.log(venuesList)
+        // render data on screen
+        venueList.innerText = venuesList
+    })
+
 }
 
 
-// render data on screen
 
 // const concertsBtn = document.querySelector('#concertsLink')
 
