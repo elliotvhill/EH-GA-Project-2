@@ -8,12 +8,14 @@ const getVenues = async () => {
     // log the data to make sure it's correct
     // console.log(response)
     const venuesArr = response.data.venues
+    let venuesHTML = ''
     venuesArr.forEach((venue) => {
-        let venuesList = venue.venue_name
-        console.log(venuesList)
+        let venueName = venue.venue_name
+        console.log(venueName)
+        venuesHTML += `<li class="venues">${venueName}</li>`
         // render data on screen
-        venueList.innerText = venuesList
     })
+    venueList.innerHTML = venuesHTML
 
 }
 

@@ -85,16 +85,15 @@ li>a:hover {
   transition: border 200ms ease;
 }
 
-ul.venues {
-  padding: 0;
-}
+/* ul.venues {
+} */
 
-.venues li {
+.venues {
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  text-transform: uppercase;
 }
 
 .container {
