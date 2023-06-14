@@ -1,51 +1,74 @@
 const apiUrl = `http://localhost:3001/api`
-const baseUrl = `http://127.0.0.1:5500/client`
-const venueMenu = document.querySelector('#venues')
-const venueList = document.querySelector('.venues')
+// const baseUrl = `http://127.0.0.1:5500/client`
+const mainContainer = document.querySelector('.container')
+const mainContent = document.querySelector('.main-content')
+const concertsBtn = document.querySelector('#concerts')
+const venuesBtn = document.querySelector('#venues')
+const artistsBtn = document.querySelector('#artists')
+document.addEventListener('DOMContentLoaded', (event) => mainContainer.style.visibility = 'hidden')
+showContent = () => mainContainer.style.visibility = 'visible'
 
-const getVenues = async () => {
+// menu buttons
+venuesBtn.addEventListener('click', async () => {
     let response = await axios.get(`${apiUrl}/venues`)
     const venuesArr = response.data.venues
+    let venuesList = ''
     let venuesHTML = ''
     venuesArr.forEach((venue) => {
         let venueName = venue.venue_name
-        console.log(venueName)
-        venuesHTML += `<li class="venues">${venueName}</li>`
+        venuesList += `<li class="venues">${venueName}</li>`
+        venuesHTML = `<ul class="venues">${venuesList}</ul>`
     })
-    venueList.innerHTML = venuesHTML
-}
-
-venueMenu.addEventListener('click', async (event) => {
-    event.preventDefault()
-    console.log('venue menu clicked')
-    getVenues()
+    showContent()
+    mainContent.innerHTML = venuesHTML
 })
 
-// const concertsBtn = document.querySelector('#concertsLink')
+concertsBtn.addEventListener('click', async () => {
+    let response = await axios.get(`${apiUrl}/concerts`)
+    const concertsArr = response.data.concerts
+    let concertsList = ''
+    let concertsHTML = ''
+    concertsArr.forEach((concert) => {
+        let concertDay = concert.concert_day
+        concertsList += `<li class="concerts">${concertDay}</li>`
+        concertsHTML = `<ul class="concerts">${concertsList}</ul>`
+    })
+    showContent()
+    mainContent.innerHTML = concertsHTML
+})
 
-// VENUES
+artistsBtn.addEventListener('click', async () => {
+    let response = await axios.get(`${apiUrl}/artists`)
+    const artistsArr = response.data.artists
+    let artistList = ''
+    let artistsHTML = ''
+    artistsArr.forEach((artist) => {
+        let artistName = artist.artist
+        artistList += `<li class="artists">${artistName}</li>`
+        artistsHTML = `<ul class="artists">${artistList}</ul`
+    })
+    showContent()
+    mainContent.innerHTML = artistsHTML
+})
 
 
-// CONCERTS
-// const firstConcert = document.querySelector('#concert1')
-// const secondConcert = document.querySelector('#concert2')
-// const thirdConcert = document.querySelector('#concert3')
-// const fourthConcert = document.querySelector('#concert4')
-// const fifthConcert = document.querySelector('#concert5')
-// const sixthConcert = document.querySelector('#concert6')
 
-// FUNCTIONS
-// concertsBtn.addEventListener('click', async () => {
-//   let response = await axios.get(`${apiUrl}/concerts`)
-//   let concert1 = response.data.collection.concerts[0]
-//   firstConcert.innerHTML = `${concert1}`
-//   console.log(concert1)
-// })
+
+
+
+
+
+
+
+
+
+
+
 
 // FOOTER
-// const currentYear = new Date().getFullYear()
-// const footerDate = () => {
-//   return currentYear
-// }
-// let copyright = document.querySelector('#year')
-// copyright.innerHTML = `<p>&copy; ${currentYear} Elliot Hill</p>`
+const currentYear = new Date().getFullYear()
+const footerDate = () => {
+  return currentYear
+}
+let copyright = document.querySelector('#year')
+copyright.innerHTML = `<p>&copy; ${currentYear} Elliot Hill</p>`
