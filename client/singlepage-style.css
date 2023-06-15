@@ -111,13 +111,18 @@ li:hover {
   margin-top: 2rem;
   background-color: rgba(156, 136, 129, 10%);
   padding: 2rem;
+  min-width: 30vw;
 }
 
 .hero-image {
   display: block;
   margin: 0 auto;
   max-width: 60vw;
-  margin-top: 2rem;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
 }
 
 #year {

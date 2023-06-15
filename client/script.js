@@ -44,7 +44,8 @@ venuesBtn.addEventListener('click', async () => {
     mainContent.innerHTML = venuesHTML
     // make each venue name a link to view info
       // function / DOM element to display venue info, photo, etc.
-    // button to link to form to add a venue
+    // link to form to add info/venue/etc.
+        
 })
 
 concertsBtn.addEventListener('click', async () => {
