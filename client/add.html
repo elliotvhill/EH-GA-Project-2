@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sad Dads - Home</title>
     <link href="singlepage-style.css" rel="stylesheet" />
-    <script defer src="script.js"></script>
+    <script defer src="add.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +28,18 @@
     <div class="container">
       <div class="main-content"></div>
       <div class="add">
-          <!-- <h4> Add a concert, venue, or artist </h4> -->
+          <h4> Add a concert, venue, or artist </h4>
+          <form class="add">
+            <label for="vName">Venue:</label>
+            <input type="text" name="vName" placeholder="venue name"><br />
+            <label for="vLoc">Location:</label>
+            <input type="text" name="vLoc" placeholder="city, state"><br />
+            <label for="cDate">Concert date:</label>
+            <input type="text" name="cDate" placeholder="mmm, DD, YYYY"><br />
+            <label for="aName">Artist:</label>
+            <input type="text" name="aName" placeholder="artist name"><br />
+            <input type="submit" class="submit">
+          </form>
       </div>
     </div>
     <footer>

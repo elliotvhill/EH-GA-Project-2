@@ -19,13 +19,13 @@ header {
 
 h1 {
   text-transform: uppercase;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.3em;
 }
 
 h2 {
   font-size: 20px;
   text-transform: lowercase;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.05em;
 }
 
 h3 {
@@ -47,7 +47,7 @@ h3 {
 .enter {
   display: flex;
   justify-content: center;
-  margin: 2rem;
+  margin: 2em;
 }
 
 a {
@@ -57,12 +57,12 @@ a {
 
 h1.landing {
     font-size: 5rem;
-    margin-top: 12rem;
+    margin-top: 12em;
 }
 
 button {
   border: 0;
-  padding: 1rem;
+  padding: 1em;
   border-radius: 10rem;
   width: 10rem;
   text-transform: lowercase;
@@ -108,9 +108,9 @@ li:hover {
   align-content: left;
   flex-direction: column;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 2em;
   background-color: rgba(156, 136, 129, 10%);
-  padding: 2rem;
+  padding: 2em;
   min-width: 30vw;
 }
 
@@ -137,4 +137,26 @@ li:hover {
   align-items: center;
   align-content: center;
   text-align: center;
+}
+
+.submit {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+  border: 0;
+  padding: 0.5em;
+  width: 5rem;
+  text-transform: lowercase;
+  font-size: 0.9rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  color: rgb(216, 136, 111);
+}
+
+.submit:hover {
+  color: rgb(186, 110, 86);
+}
+
+input {
+  margin: 0.5em;
 }
