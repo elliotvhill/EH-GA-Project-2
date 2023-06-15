@@ -6,6 +6,7 @@ const venuesBtn = document.querySelector('#venues')
 const artistsBtn = document.querySelector('#artists')
 const sadDadsHome = document.querySelector('#landing')
 const heroImage = '/images/matt-berninger-sep-2018-2-3.png'
+const addBtn = document.querySelector('.add')
 document.addEventListener('DOMContentLoaded', (event) => mainContainer.style.visibility = 'hidden')
 showContent = () => mainContainer.style.visibility = 'visible'
 
@@ -44,9 +45,9 @@ venuesBtn.addEventListener('click', async () => {
     mainContent.innerHTML = venuesHTML
     // make each venue name a link to view info
       // function / DOM element to display venue info, photo, etc.
+      
+    })
     // link to form to add info/venue/etc.
-        
-})
 
 concertsBtn.addEventListener('click', async () => {
     let response = await axios.get(`${apiUrl}/concerts`)
