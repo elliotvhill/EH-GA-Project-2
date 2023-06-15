@@ -123,6 +123,11 @@ li:hover {
 .add {
   display: flex;
   justify-content: center;
+  align-self: center;
+  border-radius: 0%;
+  margin-top: 10px;
+  padding: 5px;
+  color: rgb(156, 136, 129);
 }
 
 #year {
