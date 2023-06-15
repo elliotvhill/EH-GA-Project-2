@@ -5,8 +5,16 @@ const mainContent = document.querySelector('.main-content')
 const concertsBtn = document.querySelector('#concerts')
 const venuesBtn = document.querySelector('#venues')
 const artistsBtn = document.querySelector('#artists')
+const sadDadsHome = document.querySelector('#landing')
+const heroImage = '/images/matt-berninger-sep-2018-2-3.png'
 document.addEventListener('DOMContentLoaded', (event) => mainContainer.style.visibility = 'hidden')
 showContent = () => mainContainer.style.visibility = 'visible'
+
+sadDadsHome.addEventListener('click', async () => {
+    showContent()
+    mainContent.innerHTML = `<img
+    src="${heroImage}" class="hero-image" alt="A photo of Matt Berninger singing live. He is leaning into the microphone and has his right hand extended over his head." />`
+})
 
 // menu buttons
 venuesBtn.addEventListener('click', async () => {
