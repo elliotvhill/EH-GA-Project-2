@@ -6,7 +6,7 @@ const venuesBtn = document.querySelector('#venues')
 const artistsBtn = document.querySelector('#artists')
 const sadDadsHome = document.querySelector('#landing')
 const heroImage = '/images/matt-berninger-sep-2018-2-3.png'
-const addBtn = document.querySelector('.add')
+const addBtn = document.getElementById('add')
 document.addEventListener('DOMContentLoaded', (event) => mainContainer.style.visibility = 'hidden')
 showContent = () => mainContainer.style.visibility = 'visible'
 
@@ -17,7 +17,6 @@ let concertsArr = ''
 //     concertsInfo = response.data.concerts
 //     console.log(concertsInfo)
 // })
-
 
 // create venues array
 // create artists array
@@ -52,7 +51,6 @@ venuesBtn.addEventListener('click', async () => {
 concertsBtn.addEventListener('click', async () => {
     let response = await axios.get(`${apiUrl}/concerts`)
     concertsArr = response.data.concerts
-    // console.log(concertsArr[0])
     let concertsList = ''
     let concertsHTML = ''
     concertsArr.forEach((concert) => {
@@ -95,8 +93,40 @@ artistsBtn.addEventListener('click', async () => {
 // make each artist name a link to view info
     // function / DOM element to display artist info
 
-
-
+// add a concert via form
+    let venueName;
+    let concertLoc;
+    let concertDay;
+    let concertLineup;
+    let newConcert;
+    addBtn.addEventListener('submit', function (event) {
+        event.preventDefault()
+        venueName = document.getElementById('venue_id').value
+        concertLoc = document.getElementById('location').value
+        concertDay = document.getElementById('concert_day').value
+        concertLineup = document.getElementById('lineup').value
+        newConcert = {
+            "venue_id": venueName,
+            "location": concertLoc,
+            "concert_day": concertDay,
+            "lineup": concertLineup,
+        }
+        console.log(newConcert)
+        fetch(`${apiUrl}/concerts`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newConcert)
+        })
+            .then(response => response.json())
+            .then(data => {
+            console.log('Data sent to server:', data)
+            })
+            .catch(error => {
+            console.error('Error sending data to server:', error)
+        })
+    })
 
 
 
