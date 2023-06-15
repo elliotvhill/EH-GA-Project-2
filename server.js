@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001;
 const db = require('./db')
 const { Venue, Concert, Artist } = require('./models')
 const bodyParser = require('body-parser')
-// const controller = require('./controller')
+
 
 app.use(cors())
 app.use(express.json())
