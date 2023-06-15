@@ -7,8 +7,8 @@ const concertSchema = new Schema(
         guests: { type: Array },
         ticket_price: { type: Number },
         venue_id: { type: Array },
-        set_list: { type: Array, required: true },
-        album_tour: { type: Array, required: true },
+        set_list: { type: Array },
+        album_tour: { type: Array },
     },
     { timestamps: true }
 )
