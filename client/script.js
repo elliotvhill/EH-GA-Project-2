@@ -36,14 +36,16 @@ venuesBtn.addEventListener('click', async () => {
     let venuesHTML = ''
     venuesArr.forEach((venue) => {
         let venueName = venue.venue_name
-        venuesList += `<li class="venues">${venueName}</li>`
+        let venueLoc = venue.location
+        venuesList += `<li class="venues">${venueName} — ${venueLoc}</li>`
         venuesHTML = `<ul class="venues">${venuesList}</ul>`
     })
     showContent()
     mainContent.innerHTML = venuesHTML
+    // make each venue name a link to view info
+      // function / DOM element to display venue info, photo, etc.
+    // button to link to form to add a venue
 })
-// make each venue name a link to view info
-    // function / DOM element to display venue info, photo, etc.
 
 concertsBtn.addEventListener('click', async () => {
     let response = await axios.get(`${apiUrl}/concerts`)
@@ -54,7 +56,7 @@ concertsBtn.addEventListener('click', async () => {
     concertsArr.forEach((concert) => {
         let concertDay = concert.concert_day
         let concertVenue = concert.venue_id
-        concertsList += `<li class="concerts">${concertDay} – ${concertVenue}</li>`
+        concertsList += `<li class="concerts">${concertDay} — ${concertVenue}</li>`
         concertsHTML = `<ul class="concerts">${concertsList}</ul>`
     })
     showContent()
