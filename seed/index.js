@@ -37,7 +37,6 @@ const main = async () => {
       image: undefined,
     },
   ]
-
   await Venue.deleteMany()
   await Venue.insertMany(venues)
   console.log("Created venues")

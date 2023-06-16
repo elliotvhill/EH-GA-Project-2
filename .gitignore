@@ -1,2 +1,5 @@
 /node_modules
 .DS_Store
+client/artists.html
+client/concerts.html
+client/venues.html

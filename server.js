@@ -7,7 +7,6 @@ const db = require('./db')
 const { Venue, Concert, Artist } = require('./models')
 const bodyParser = require('body-parser')
 
-
 app.use(cors())
 app.use(express.json())
 app.use(bodyParser.json())
