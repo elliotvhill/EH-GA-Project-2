@@ -42,13 +42,13 @@ h3 {
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 h1.landing {
-    font-size: 5rem;
-    margin-top: 1em;
+  font-size: 5rem;
+  margin-top: 1em;
 }
 
 button {
@@ -82,7 +82,7 @@ ul {
   text-transform: uppercase;
 }
 
-li>a:hover {
+li > a:hover {
   border-bottom: 0.15rem solid rgb(156, 136, 129);
   font-weight: 600;
   transition: border 200ms ease;
