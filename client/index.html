@@ -2,28 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sad Dads</title>
+    <title>Sad Dads - Home</title>
     <link href="style.css" rel="stylesheet" />
     <script defer src="script.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../server.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <h1 class="landing">Sad Dads</h1>
-      <h2>Concert Tracker</h2>
+      <h3 id="landing"><a href="/client/main.html">Sad Dads</a></h3>
     </header>
-    <div>
-      <div class="enter">
-        <button class="enter">
-          <a href="/client/main.html"> Enter Site </a>
-        </button>
-      </div>
+    <div class="menu">
+      <ul>
+        <li class="menu"><a href="#" id="concerts"> Concerts </a></li>
+        <li class="menu"><a href="#" id="venues"> Venues </a></li>
+        <li class="menu"><a href="#" id="artists"> Artists </a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="main-content"></div>
+      <div class="add"></div>
     </div>
     <footer>
       <div id="year"></div>

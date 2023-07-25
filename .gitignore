@@ -3,7 +3,7 @@
 client/artists.html
 client/concerts.html
 client/venues.html
-
-# files #
+.env
+*.env
 /Sad\ Dads\ Concert\ Tracker\ Wireframe.fig
 /Sad\ Dads\ Concert\ Tracker.jam
