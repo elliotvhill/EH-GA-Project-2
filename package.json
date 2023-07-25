@@ -19,6 +19,7 @@
     "mongoose": "^7.2.4",
     "morgan": "^1.10.0",
     "node.js": "^0.0.1-security",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "railway": "^2.0.17"
   }
 }
