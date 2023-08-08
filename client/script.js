@@ -1,5 +1,7 @@
 // const apiUrl = `http://localhost:3001/api` // DEV
-const URI = process.env.MONGO_URL // PROD
+const dotenv = require('dotenv')
+dotenv.config()
+const URI = process.env.MONGO_URL || 3000 // PROD
 const mainContainer = document.querySelector(".container")
 const mainContent = document.querySelector(".main-content")
 const concertsBtn = document.querySelector("#concerts")

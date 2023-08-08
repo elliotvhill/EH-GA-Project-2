@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
+const dotenv = require('dotenv')
 const AppRouter = require('./routes/AppRouter')
-const PORT = process.env.MONGO_PORT /* || 3001; */
+const PORT = process.env.MONGOPORT
 const db = require('./db')
 const { Venue, Concert, Artist } = require('./models')
 const bodyParser = require('body-parser')
 
+dotenv.config()
 app.use(cors())
 app.use(express.json())
 app.use(bodyParser.json())
