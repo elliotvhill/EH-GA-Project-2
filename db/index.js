@@ -1,9 +1,12 @@
 const mongoose = require("mongoose")
 const dotenv = require('dotenv')
 dotenv.config()
-const URI = process.env.MONGO_URL
+const MONGO_URL = process.env.MONGO_URL
 mongoose
-  .connect(`${URI}`)
+  .connect(MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("Successfully connected to MongoDB")
   })
