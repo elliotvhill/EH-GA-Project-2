@@ -1,7 +1,7 @@
 // const apiUrl = `http://localhost:3001/api` // DEV
 const dotenv = require('dotenv')
 dotenv.config()
-const URI = process.env.MONGO_URL || 3000 // PROD
+const MONGO_URL = process.env.MONGO_URL || 3000 // PROD
 const mainContainer = document.querySelector(".container")
 const mainContent = document.querySelector(".main-content")
 const concertsBtn = document.querySelector("#concerts")
@@ -18,7 +18,7 @@ showContent = () => (mainContainer.style.visibility = "visible")
 let concertsArr = ""
 venuesBtn.addEventListener("click", async () => {
   // let response = await axios.get(`${apiUrl}/venues`)  // DEV
-  let response = await axios.get(`${URI}/venues`) // PROD
+  let response = await axios.get(`${MONGO_URL}/venues`) // PROD
   const venuesArr = response.data.venues
   let venuesList = ""
   let venuesHTML = ""
@@ -33,7 +33,7 @@ venuesBtn.addEventListener("click", async () => {
 })
 concertsBtn.addEventListener("click", async () => {
   // let response = await axios.get(`${apiUrl}/concerts`) // DEV
-  let response = await axios.get(`${URI}/concerts`) // PROD
+  let response = await axios.get(`${MONGO_URL}/concerts`) // PROD
   concertsArr = response.data.concerts
   let concertsList = ""
   let concertsHTML = ""
@@ -49,7 +49,7 @@ concertsBtn.addEventListener("click", async () => {
 })
 artistsBtn.addEventListener("click", async () => {
   // let response = await axios.get(`${apiUrl}/artists`) // DEV
-  let response = await axios.get(`${URI}/artists`) // PROD
+  let response = await axios.get(`${MONGO_URL}/artists`) // PROD
   const artistsArr = response.data.artists
   let artistList = ""
   let artistsHTML = ""

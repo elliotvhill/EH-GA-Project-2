@@ -7,3 +7,4 @@ client/venues.html
 *.env
 /Sad\ Dads\ Concert\ Tracker\ Wireframe.fig
 /Sad\ Dads\ Concert\ Tracker.jam
+.vercel
