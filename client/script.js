@@ -1,4 +1,5 @@
-const apiUrl = `http://localhost:3001/api`
+// const apiUrl = `http://localhost:3001/api` // DEV
+const URI = process.env.DB_URI_PROD // PROD
 const mainContainer = document.querySelector(".container")
 const mainContent = document.querySelector(".main-content")
 const concertsBtn = document.querySelector("#concerts")
@@ -13,9 +14,9 @@ document.addEventListener(
 )
 showContent = () => (mainContainer.style.visibility = "visible")
 let concertsArr = ""
-// menu buttons navigation
 venuesBtn.addEventListener("click", async () => {
-  let response = await axios.get(`${apiUrl}/venues`)
+  // let response = await axios.get(`${apiUrl}/venues`)  // DEV
+  let response = await axios.get(`${URI}/venues`) // PROD
   const venuesArr = response.data.venues
   let venuesList = ""
   let venuesHTML = ""
@@ -29,7 +30,8 @@ venuesBtn.addEventListener("click", async () => {
   mainContent.innerHTML = venuesHTML
 })
 concertsBtn.addEventListener("click", async () => {
-  let response = await axios.get(`${apiUrl}/concerts`)
+  // let response = await axios.get(`${apiUrl}/concerts`) // DEV
+  let response = await axios.get(`${URI}/concerts`) // PROD
   concertsArr = response.data.concerts
   let concertsList = ""
   let concertsHTML = ""
@@ -44,7 +46,8 @@ concertsBtn.addEventListener("click", async () => {
   addBtn.innerHTML = `<button class="add"><a href="/client/add.html"> Add a concert </a>`
 })
 artistsBtn.addEventListener("click", async () => {
-  let response = await axios.get(`${apiUrl}/artists`)
+  // let response = await axios.get(`${apiUrl}/artists`) // DEV
+  let response = await axios.get(`${URI}/artists`) // PROD
   const artistsArr = response.data.artists
   let artistList = ""
   let artistsHTML = ""
@@ -56,7 +59,7 @@ artistsBtn.addEventListener("click", async () => {
   showContent()
   mainContent.innerHTML = artistsHTML
 })
-// FOOTER
+
 const currentYear = new Date().getFullYear()
 const footerDate = () => {
   return currentYear
