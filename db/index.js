@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const URI = process.env.DB_URI_PROD
+const URI = process.env.MONGO_URL
 mongoose
   .connect(`${URI}`)
   .then(() => {
@@ -11,13 +11,3 @@ mongoose
 mongoose.set("debug", true)
 const db = mongoose.connection
 module.exports = db
-
-// import mongodb from 'mongodb';
-
-// const MongoClient = mongodb.MongoClient;
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-// client.connect(err => {
-//   const collection = client.db("saddads").collection("concerts");
-//   // perform actions on the collection object
-//   client.close();
-// });

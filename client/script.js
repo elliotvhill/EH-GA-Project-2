@@ -1,5 +1,5 @@
 // const apiUrl = `http://localhost:3001/api` // DEV
-const URI = process.env.DB_URI_PROD // PROD
+const URI = process.env.MONGO_URL // PROD
 const mainContainer = document.querySelector(".container")
 const mainContent = document.querySelector(".main-content")
 const concertsBtn = document.querySelector("#concerts")
