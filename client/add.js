@@ -1,4 +1,6 @@
-const apiUrl = `http://localhost:3001/api`
+const dotenv = require('dotenv')
+dotenv.config()
+const MONGO_URL = process.env.MONGO_URL || 3001 // PROD
 let venueName
 let concertLoc
 let concertDay
@@ -17,7 +19,7 @@ document.getElementById("add").addEventListener("submit", function (event) {
     lineup: concertLineup,
   }
   console.log(newConcert)
-  fetch(`${apiUrl}/concerts`, {
+  fetch(`${MONGO_URL}/concerts`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
