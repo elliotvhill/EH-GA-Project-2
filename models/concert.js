@@ -6,7 +6,7 @@ const concertSchema = new Schema(
     attendees: { type: Number },
     guests: { type: Array },
     ticket_price: { type: Number },
-    venue_id: { type: Array },
+    venue_id: { type: Schema.Types.ObjectId, ref: 'Venue' },
     set_list: { type: Array },
     album_tour: { type: Array },
   },
